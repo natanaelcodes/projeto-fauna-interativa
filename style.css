@@ -1,0 +1,282 @@
+@import "/Cores.css";
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+header{
+width: 100%;
+  padding: 28px 8%;
+  position: sticky;
+  top: 0;
+    background-color: var(--color-primary-1);
+  z-index: 3;
+}
+
+
+body{
+  background-color:#171226;
+  color: #ffe;
+
+  
+}
+li, a{
+  color: #ffe;
+  list-style: none;
+  text-decoration: none;
+}
+.navegacao{
+  display: flex;
+    width: 100%;
+    
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul{
+  display: flex;
+gap: 48px;
+}
+.btn-wolf{
+border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var( --cor-Button);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.container-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 28px 8%;
+  padding-top: 5rem;
+}
+.imagem-container{
+  width: 300px;
+}
+section {
+  scroll-margin-top: 80px; /* Ajuste para o tamanho exato da altura do seu header */
+}
+.lobo-img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+ border-radius: 1rem;
+box-shadow: wheat 0px 0px 6px 0px;
+ 
+
+  
+
+  }
+  .titulo-descricao{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .description{
+    line-height: 1.4;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+ .button-description {
+    display: inline-block; /* Importante para links que parecem botões */
+    background-color: var(--cor-Button, ); /* Fallback caso a var não carregue */
+    border-radius: 12px;
+    padding: 10px 24px; /* Aumentei um pouco o padding lateral */
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button-description:hover {
+    transform: translateY(-2px); /* Efeito de flutuar ao passar o mouse */
+    filter: brightness(1.1);
+}
+@media(max-width:800px){
+  .container-menu{
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  
+}
+ #menu{
+  display: flex;
+  flex-direction: column;
+ padding: 28px 8%;
+ 
+
+
+ 
+ }
+
+ 
+ #menu p{
+  font-size: medium;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+ }
+ #menu h2{
+  line-height: 1.2;
+  margin-bottom: 1rem;
+ }
+ .galeria-lobos {
+  display: flex;       /* Coloca os cards lado a lado */
+  flex-wrap: wrap;     /* Faz pular linha se não couber */
+  gap: 1.5rem; 
+  padding: 1.5rem;
+  margin-top: 20px;          /* Espaço entre os cards */
+  justify-content: center;
+ 
+}
+
+.lobo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between; 
+  align-items: center;
+  margin: 0;         
+  background-color: #251e3d; 
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+.lobo-card:hover {
+  transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+}
+
+.lobo-card img {
+  border-radius: 8px;
+  display: block;      /* Remove um pequeno espaço vazio abaixo da imagem */
+}
+
+.lobo-card figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+ .lobo-card {
+  text-align: center; /* Centraliza a legenda sob a imagem */
+  background-color: #251e3d; /* Um fundo leve para o card */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.lobo-card figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #adb5bd; 
+  font-style: italic;
+}
+
+.lobo-detalhe {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10rem;
+  padding: 28px 8%;
+
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+   transition: 0.6s ease;
+
+ ;
+}
+
+.lobo-detalhe:nth-child(2) { transition-delay: 0.1s; }
+.lobo-detalhe:nth-child(3) { transition-delay: 0.2s; }
+.lobo-detalhe:nth-child(4) { transition-delay: 0.3s; }
+
+.lobo-detalhe.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media(max-width:800px){
+  .lobo-detalhe{
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.detalhe-info{
+flex: 1;
+  padding: 20px;
+}
+.detalhe-info h2 {
+  line-height: 1.2;
+    border-left: 6px solid #b0944d; 
+    margin-bottom: 1rem;
+    padding-left: 20px;          
+    color: #b0944d;                
+    text-transform: uppercase;   
+}
+.detalhe-info p {
+  line-height: 1.7;
+  font-size: 1rem;
+    margin-bottom: 1rem;/* Aquela linha vertical elegante ao lado do nome */
+    padding-left: 20px;            /* Afasta o texto da linha vertical */
+    color: #cce;                /* Cor dourada para combinar com o tema */
+}
+
+
+.lobo-detalhe img {
+    display: block;
+    
+    
+    flex-shrink: 0; 
+
+  
+    height: auto;
+    
+    
+
+    border-radius: 20px;
+    
+   
+}
+footer {
+    background-color: var(--color-primary-2);
+   
+    width: 100%;
+}
+
+
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 8% 24px 8%; 
+    align-items: center;
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.social-media-buttons a {
+    background: white;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
